@@ -1,0 +1,221 @@
+type: collection.insomnia.rest/5.0
+name: app tarefas
+meta:
+  id: wrk_e269d8055333472b95d6dd288abecb48
+  created: 1761937924873
+  modified: 1761937924873
+  description: ""
+collection:
+  - url: http://127.0.0.1:5000/api/usuarios/cadastro
+    name: 1. /api/usuario/cadastro
+    meta:
+      id: req_4bb9cb4f27ee4b99bd577e823eace9a2
+      created: 1761937941739
+      modified: 1761938054601
+      isPrivate: false
+      description: ""
+      sortKey: -1761937941739
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"username": "guilherme",
+        	"password": "minhasenha"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://127.0.0.1:5000/api/usuarios/login
+    name: 2. /api/usuario/login
+    meta:
+      id: req_49a058edb6bc4178870fa56c33e13614
+      created: 1761938064142
+      modified: 1761938067634
+      isPrivate: false
+      description: ""
+      sortKey: -1761636337245
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"username": "guilherme",
+        	"password": "minhasenha"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://127.0.0.1:5000/api/tarefas/create
+    name: 3. /api/tarefas/create
+    meta:
+      id: req_ea81035f335a458886f42174751d21e4
+      created: 1761938122368
+      modified: 1761938461303
+      isPrivate: false
+      description: ""
+      sortKey: -1761636337145
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"titulo": "tarefa teste",
+        	"descricao": "minha tarefa teste"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_2686388b750a476bb645e448bdc70feb
+      - name: User-Agent
+        value: insomnia/11.6.2
+        id: pair_5b41cc5e94414f6ba54bdbc096b0c2b0
+      - id: pair_308e826482724c82a93e2b8702c65690
+        name: Authorization
+        value: Bearer
+          eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MTkzODQ1MywianRpIjoiZDgwMTZjYTItM2Q5Yi00OTQwLTk5NGMtYThmZWYyNGFhODk2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NjE5Mzg0NTMsImNzcmYiOiJkMzQ3MWY1YS0zN2Q3LTRiMjQtOGVmZC0zYjNjYzkzYjZhN2UiLCJleHAiOjE3NjE5MzkzNTN9.6cNShmSlmULa9bQ3DBM_78y7GeHaUdHiJsOyMmx2OII
+        description: ""
+        disabled: false
+    authentication:
+      type: none
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://127.0.0.1:5000/api/tarefas/
+    name: 4. /api/tarefas/
+    meta:
+      id: req_142aef818bac4b838618414483531757
+      created: 1761938484403
+      modified: 1761938508324
+      isPrivate: false
+      description: ""
+      sortKey: -1761485534948
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.6.2
+        id: pair_5b41cc5e94414f6ba54bdbc096b0c2b0
+      - id: pair_308e826482724c82a93e2b8702c65690
+        name: Authorization
+        value: Bearer
+          eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MTkzODQ1MywianRpIjoiZDgwMTZjYTItM2Q5Yi00OTQwLTk5NGMtYThmZWYyNGFhODk2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NjE5Mzg0NTMsImNzcmYiOiJkMzQ3MWY1YS0zN2Q3LTRiMjQtOGVmZC0zYjNjYzkzYjZhN2UiLCJleHAiOjE3NjE5MzkzNTN9.6cNShmSlmULa9bQ3DBM_78y7GeHaUdHiJsOyMmx2OII
+        description: ""
+        disabled: false
+    authentication:
+      type: none
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://127.0.0.1:5000/api/tarefas/1
+    name: 5. /api/tarefas/<int:tarefa_id>
+    meta:
+      id: req_2604631793324b04948221edc07a7404
+      created: 1761938552282
+      modified: 1761938580743
+      isPrivate: false
+      description: ""
+      sortKey: -1761410133849.5
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"titulo": "tarefa teste",
+        	"descricao": "minha tarefa teste",
+        	"concluida": true
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.2
+        id: pair_5b41cc5e94414f6ba54bdbc096b0c2b0
+      - id: pair_308e826482724c82a93e2b8702c65690
+        name: Authorization
+        value: Bearer
+          eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MTkzODQ1MywianRpIjoiZDgwMTZjYTItM2Q5Yi00OTQwLTk5NGMtYThmZWYyNGFhODk2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NjE5Mzg0NTMsImNzcmYiOiJkMzQ3MWY1YS0zN2Q3LTRiMjQtOGVmZC0zYjNjYzkzYjZhN2UiLCJleHAiOjE3NjE5MzkzNTN9.6cNShmSlmULa9bQ3DBM_78y7GeHaUdHiJsOyMmx2OII
+        description: ""
+        disabled: false
+    authentication:
+      type: none
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://127.0.0.1:5000/api/tarefas/1
+    name: 6. /api/tarefas/<int:tarefa_id>
+    meta:
+      id: req_b8c8be2dbee04a3a9c91bab41172b893
+      created: 1761938613107
+      modified: 1761938627176
+      isPrivate: false
+      description: ""
+      sortKey: -1761372433300.25
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/11.6.2
+        id: pair_5b41cc5e94414f6ba54bdbc096b0c2b0
+      - id: pair_308e826482724c82a93e2b8702c65690
+        name: Authorization
+        value: Bearer
+          eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MTkzODQ1MywianRpIjoiZDgwMTZjYTItM2Q5Yi00OTQwLTk5NGMtYThmZWYyNGFhODk2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NjE5Mzg0NTMsImNzcmYiOiJkMzQ3MWY1YS0zN2Q3LTRiMjQtOGVmZC0zYjNjYzkzYjZhN2UiLCJleHAiOjE3NjE5MzkzNTN9.6cNShmSlmULa9bQ3DBM_78y7GeHaUdHiJsOyMmx2OII
+        description: ""
+        disabled: false
+    authentication:
+      type: none
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_9f490548984972236f709390ccdf32d49e49c6fe
+    created: 1761937924875
+    modified: 1761937924875
+environments:
+  name: Base Environment
+  meta:
+    id: env_9f490548984972236f709390ccdf32d49e49c6fe
+    created: 1761937924874
+    modified: 1761937924874
+    isPrivate: false

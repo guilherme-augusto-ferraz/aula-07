@@ -104,7 +104,3 @@ Boas práticas e próximos passos
 - Trocar `JWT_SECRET_KEY` por variável de ambiente em produção.
 - Adicionar validação de entradas (schemas) e tratamento de erros detalhado.
 - Adicionar testes automatizados para endpoints e modelos.
-
-Se quiser, eu posso:
-- Abrir e extrair a lista exata de endpoints (métodos e paths) lendo `app/routes/usuarios.py` e `app/routes/tarefas.py` e inserir exemplos concretos de payloads e respostas no README.
-- Gerar exemplos prontos de requests (curl/Insomnia) com base nas rotas reais encontradas nos arquivos.
